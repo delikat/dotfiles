@@ -1,3 +1,22 @@
+install_brew() {
+  if [[ $(brew --version) ]] ; then
+      echo "Attempting to update Homebrew from version $(brew --version)"
+      brew update
+  else
+      echo "Attempting to install Homebrew"
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  
+  export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+  brew update; brew upgrade --cask; brew cleanup || true
+
+  echo Effective Homebrew version:
+  brew --version
+}
+
 install_packages() {
   brew install mas
 }
@@ -10,6 +29,7 @@ install_casks() {
     google-chrome
     iterm2
     menumeters
+    monitorcontrol
     signal
     spotify
     visual-studio-code
@@ -41,10 +61,13 @@ install_mas() {
 }
 
 main() {
+  install_brew
   install_packages
   install_casks
   install_mas
   list_all
 }
+
+
 
 main
