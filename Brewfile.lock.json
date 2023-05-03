@@ -98,6 +98,12 @@
         "options": {
           "full_name": "visual-studio-code"
         }
+      },
+      "raycast": {
+        "version": "1.50.1",
+        "options": {
+          "full_name": "raycast"
+        }
       }
     },
     "brew": {
