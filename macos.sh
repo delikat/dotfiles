@@ -54,6 +54,27 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 20
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 ###############################################################################
+# Screen                                                                      #
+###############################################################################
+
+# Enable subpixel font rendering on non-Apple LCDs
+# Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
+defaults write NSGlobalDomain AppleFontSmoothing -int 1
+
+# Set Screen Savers
+# TODO: this doesn't work
+	defaults -currentHost write com.apple.screensaver moduleDict "
+	  <dict>
+	    <key>moduleName</key><string>Shell</string>
+	    <key>path</key><string>/System/Library/Screen Savers/Drift.qtz</string>
+	    <key>type</key><integer>1</integer>
+	  </dict>
+	"
+
+# Start after 10 inutes
+defaults -currentHost write com.apple.screensaver idleTime -int 600
+
+###############################################################################
 # Finder                                                                      #
 ###############################################################################
 
