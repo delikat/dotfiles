@@ -1,13 +1,16 @@
 # Taps
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 
 # Apps
+cask "1password7"
 cask "brave-browser"
 cask "discord"
 cask "docker"
 cask "font-hack"
 cask "font-hack-nerd-font"
+cask "github"
 cask "google-chrome"
 cask "iterm2"
 cask "menumeters"
@@ -18,6 +21,7 @@ cask "raycast"
 cask "signal"
 cask "spotify"
 cask "visual-studio-code"
+cask "vlc"
 
 # Binaries
 brew "dockutil"
@@ -26,6 +30,7 @@ brew "gh"
 brew "htop"
 brew "lsd"
 brew "mas"
+brew "nvm"
 brew "starship"
 
 # App Store
