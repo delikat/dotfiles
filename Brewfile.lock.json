@@ -134,6 +134,36 @@
         "options": {
           "full_name": "vlc"
         }
+      },
+      "1password@7": {
+        "version": "7.9.11",
+        "options": {
+          "full_name": "1password@7"
+        }
+      },
+      "protonmail-bridge": {
+        "version": "3.14.0",
+        "options": {
+          "full_name": "protonmail-bridge"
+        }
+      },
+      "protonvpn": {
+        "version": "4.5.0",
+        "options": {
+          "full_name": "protonvpn"
+        }
+      },
+      "qflipper": {
+        "version": "1.3.3",
+        "options": {
+          "full_name": "qflipper"
+        }
+      },
+      "zenmap": {
+        "version": "7.95",
+        "options": {
+          "full_name": "zenmap"
+        }
       }
     },
     "brew": {
