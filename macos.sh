@@ -283,6 +283,19 @@ defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
+# Developer directory                           #
+###############################################################################
+
+# Create a ~/Developer directory
+mkdir -p ~/Developer
+
+# Add ~/Developer to the Finder sidebar using mysides
+mysides add Developer file:///Users/$(whoami)/Developer
+
+# Add ~/Home to the Finder sidebar using mysides
+mysides add ${whoami} file:///Users/$(whoami)
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
