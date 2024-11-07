@@ -78,11 +78,16 @@ defaults -currentHost write com.apple.screensaver idleTime -int 600
 # Finder                                                                      #
 ###############################################################################
 
-# Show icons for hard drives, servers, and removable media on the desktop
+# Show icons for hard drives, servers, and removable media on the desktop and sidebar
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+defaults write com.apple.sidebarlists systemitems -dict-add ShowServers -int 1
+defaults write com.apple.sidebarlists systemitems -dict-add ShowRemovable -int 1
+defaults write com.apple.sidebarlists systemitems -dict-add ShowHardDisks -int 1
+defaults write com.apple.sidebarlists systemitems -dict-add ShowEjectables -int 1
+
 
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
