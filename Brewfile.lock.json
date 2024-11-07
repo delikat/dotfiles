@@ -164,6 +164,12 @@
         "options": {
           "full_name": "zenmap"
         }
+      },
+      "gpg-suite": {
+        "version": "2023.3",
+        "options": {
+          "full_name": "gpg-suite"
+        }
       }
     },
     "brew": {
